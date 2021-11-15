@@ -8,12 +8,12 @@ class HomeTests(SimpleTestCase):
     def test_home_page_status_code(self):
         url = reverse("home")
         response=self.client.get(url)
-        self.assertEqual(response,200)
+        self.assertEqual(response.status_code,200)
     
     def test_about_us_page_status_code(self):
         url = reverse("about_us")
         response=self.client.get(url)
-        self.assertEqual(response,200)
+        self.assertEqual(response.status_code,200)
 
     def test_home_page_templet(self):
         url = reverse("home")
